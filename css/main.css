@@ -1,0 +1,363 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Forms
+        - Lists
+        - Media
+        - Tables
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        - Buttons
+        - Header
+        - Navigation 
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - Alignment	    
+        - Color
+        - Size
+-----------------------------------------------------------------*/
+
+/*---4.0 ELEMENTS---*/
+
+/*---forms---*/
+
+label[for="first-name"], label[for="last-name"], label[for="email"] {
+	display: none;
+}
+
+
+/*---typography---*/
+
+html {
+	font-family: basic-sans, sans-serif;
+}
+
+
+.bg-blue p:first-child {
+	font: 700 1rem "museo slab";
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 2.5em;
+}
+
+footer p {
+	color: #fff;
+}
+
+@media only screen and (min-width: 1024px){
+	
+	section p, label{
+		font-size: 1rem;
+	}
+	
+	h1 {
+		font-size: 2.5rem;
+	}
+	
+	h2 {
+		font-size: 2rem;
+	}
+	
+	h3 {
+		font-size: 1.8rem;
+	}
+	
+	h4 {
+		font-size: 1.3rem;
+	}
+	
+	header nav {
+		font-size: 1.0rem;
+	}
+	
+	.hvr-underline {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        overflow: hidden;
+      }
+      .hvr-underline:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: 0;
+        background: #000080;
+        height: 4px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.8s;
+        transition-duration: 0.8s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+      .hvr-underline:hover:before, .hvr-underline:focus:before, .hvr-underline:active:before {
+        left: 0;
+        right: 0;
+      }
+	
+}
+
+@media only screen and (min-width: 768px) {
+		
+	section p, label{
+		font-size: .9rem;
+	}
+	
+	h1 {
+		font-size: 2.0rem;
+	}
+	
+	h2 {
+		font-size: 1.8rem;
+	}
+	
+	h3 {
+		font-size: 1.4rem;
+	}
+	
+	h4 {
+		font-size: 1.1rem;
+	}
+	
+	header nav {
+		font-size: 1.0rem;
+	}
+	
+	.hvr-underline {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        overflow: hidden;
+      }
+      .hvr-underline:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: 0;
+        background: #000080;
+        height: 4px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.8s;
+        transition-duration: 0.8s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+      .hvr-underline:hover:before, .hvr-underline:focus:before, .hvr-underline:active:before {
+        left: 0;
+        right: 0;
+      }
+}
+
+@media only screen and (max-width: 768px) {
+	
+	section p, label{
+		font-size: .8rem;
+	}
+	
+	h1 {
+		font-size: 1.6rem;
+	}
+	
+	h2 {
+		font-size: 1.4rem;
+	}
+	
+	h3 {
+		font-size: 1.0rem;
+	}
+	
+	h4 {
+		font-size: .9rem;
+	}
+	
+	header nav {
+		font-size: .8rem;
+	}
+	
+	#solutions img, #partners, #security {
+		display: none;
+	}
+	
+	footer .col-md-2 {
+		display: none;
+	}
+	
+}
+
+
+
+/*---lists---*/
+
+a {
+	text-decoration: none;
+}
+
+
+footer nav li {
+	display: block;
+}
+
+li, .sprite a {
+	display: inline-block;
+}
+
+ul {
+	list-style: none;
+}
+
+
+
+
+
+/*---6.0 COMPONENTS---*/
+
+.bg-blue, footer {
+	padding: 5em 0;
+}
+
+#partners {
+	padding: 5em 0 0;
+}
+
+h2 {
+	margin-top: 4em;
+}
+/*---buttons---*/
+
+.btn-blu, .btn-dk-blu {
+	padding: 1em 11em;
+	border-radius: .5em;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.btn-blu:hover, .btn-dk-blu:hover {
+	border: .05em solid #3fa9f5;
+	background-color: #fff;
+	color: #3fa9f5; 
+}
+
+.sprite li:first-child {
+	background-image:url("../img/icon-fb.png")
+}
+
+.sprite li:nth-child(2) a {
+	background-image:url("../img/icon-twitter.png")
+}
+
+.sprite li:last-child a {
+	background-image:url("../img/icon-insta.png")
+}
+
+.sprite a {
+	background-repeat: no-repeat;
+	width: 26px;
+	height: 24px;
+}
+
+.sprite a:hover {
+	background-position: 0 -24px;
+}
+
+#solutions section {
+	background-color: rgba(207,245,255,0.5);
+	padding: 1em .4em 1.5em;
+	margin: 1em 0;
+}
+
+
+/*---navigation---*/
+
+nav li {
+	margin-right: .7em;
+}
+
+nav li:last-child {
+	margin-right: none;
+}
+
+nav a:visited, footer p a:visited {
+	color: #797979;
+}
+
+
+
+
+
+/*---7.0 UTILITIES---*/
+
+.bg-blue, .btn-blu {
+	background-color: #3fa9f5;
+}
+
+.btn-dk-blu {
+	background-color: #fff;
+}
+
+.f-right {
+	float: right;
+}
+
+/*---gradient color on horizontal rules---*/
+.h-bar {
+	height: .2em;
+	background: #313d74;
+    background: -moz-linear-gradient(left,  #313d74 0%, #2989d8 50%, #207cca 51%, #3fa9f5 100%);
+    background: -webkit-linear-gradient(left,  #313d74 0%,#2989d8 50%,#207cca 51%,#3fa9f5 100%);
+    background: linear-gradient(to right,  #313d74 0%,#2989d8 50%,#207cca 51%,#3fa9f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313d74', endColorstr='#3fa9f5',GradientType=1 );
+	margin: 0 auto 2em;
+	
+
+}
+
+.no-float {
+	float: none;
+}
+
+
+.txt-ctr {
+	text-align: center;
+}
+
+.txt-left {
+	text-align: left;
+}
+
+footer, .btn-dk-blu {
+	background-color: #313d74;
+}
+
+@media only screen and (min-width: 768px) {
+	
+	.ctr-block {
+		float: none;
+		margin: 0 auto;
+	}
+}
+
+
+
+
+
+
