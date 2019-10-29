@@ -49,13 +49,13 @@ html {
 	margin-bottom: 2.5em;
 }
 
-footer p {
+footer p, footer a {
 	color: #fff;
 }
 
 @media only screen and (min-width: 1024px){
 	
-	section p, label{
+	section p, label, footer p, footer a{
 		font-size: 1rem;
 	}
 	
@@ -113,7 +113,7 @@ footer p {
 
 @media only screen and (min-width: 768px) {
 		
-	section p, label{
+	section p, label, footer p, footer a{
 		font-size: .9rem;
 	}
 	
@@ -170,7 +170,7 @@ footer p {
 
 @media only screen and (max-width: 768px) {
 	
-	section p, label{
+	section p, label, footer p, footer a {
 		font-size: .8rem;
 	}
 	
@@ -194,11 +194,7 @@ footer p {
 		font-size: .8rem;
 	}
 	
-	#solutions img, #partners, #security {
-		display: none;
-	}
-	
-	footer .col-md-2 {
+	#solutions img, #partners, #security, footer .col-md-2 {
 		display: none;
 	}
 	
@@ -217,7 +213,7 @@ footer nav li {
 	display: block;
 }
 
-li, .sprite a {
+li, #sprites li {
 	display: inline-block;
 }
 
@@ -235,6 +231,10 @@ ul {
 	padding: 5em 0;
 }
 
+.bg-blue {
+	margin-top: 2.5em;
+}
+
 #partners {
 	padding: 5em 0 0;
 }
@@ -243,6 +243,7 @@ h2 {
 	margin-top: 4em;
 }
 /*---buttons---*/
+
 
 .btn-blu, .btn-dk-blu {
 	padding: 1em 11em;
@@ -257,15 +258,15 @@ h2 {
 	color: #3fa9f5; 
 }
 
-.sprite li:first-child {
+#sprites li:first-child {
 	background-image:url("../img/icon-fb.png")
 }
 
-.sprite li:nth-child(2) a {
+#sprites li:nth-child(2) a {
 	background-image:url("../img/icon-twitter.png")
 }
 
-.sprite li:last-child a {
+#sprites li:last-child a {
 	background-image:url("../img/icon-insta.png")
 }
 
@@ -293,11 +294,15 @@ nav li {
 }
 
 nav li:last-child {
-	margin-right: none;
+	margin-right: 0;
 }
 
-nav a:visited, footer p a:visited {
+nav a:visited, footer a:visited {
 	color: #797979;
+}
+
+nav a:hover, footer a:hover {
+	color: #3fa9f5; 
 }
 
 
